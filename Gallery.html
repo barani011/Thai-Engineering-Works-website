@@ -4,70 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
+
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-bar" style="overflow: visible !important;">
-      <a class="logo" href="#home">
-        <img src="assets/logo-86bbf0.png" alt="Thai Engineering Works logo">
-      </a><br>
-      <nav class="nav" id="nav"><br>
-        <a href="index.html">Home</a>
-        <div class="nav-item has-dropdown">
-          <a href="index.html" class="product-link">Products</a>
-          <div class="dropdown">
-            <a href="burstor machine.html">Burstor Machine</a>
-            <a href="#products">Screener Machines</a>
-            <a href="#products">Hydraulic Baling Press</a>
-            <a href="#products">Conveyor System</a>
-          </div>
-        </div>
-        <a href="About.html" >About</a>
-        <a href="#contact">Contact</a>
-        <a href="Gallery.html">Gallery</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn-primary call-btn" href="tel:+919942235148">Call Now</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
 
-<main class="gallery-container">
-        
-        <div class="toggle-container">
-            <button id="toggleUploadBtn" class="btn-toggle">
-                <i class="fas fa-plus-circle"></i>
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+    <div class="container header-bar" style="overflow: visible !important;">
+        <a class="logo" href="#home">
+            <img src="assets/logo-86bbf0.png" alt="Thai Engineering Works logo">
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="index.html">Home</a>
+
+            <div class="nav-item has-dropdown">
+                <a href="index.html" class="product-link">Products</a>
+                <div class="dropdown">
+                    <a href="burstor machine.html">Burstor Machine</a>
+                    <a href="#products">Screener Machines</a>
+                    <a href="#products">Hydraulic Baling Press</a>
+                    <a href="#products">Conveyor System</a>
+                </div>
+            </div>
+
+            <a href="About.html">About</a>
+            <a href="#contact">Contact</a>
+            <a href="Gallery.html" class="active">Gallery</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="btn btn-primary call-btn" href="tel:+919942235148">Call Now</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
             </button>
         </div>
-
-        <section id="uploadSection" class="upload-section hidden">
-            <h2>Add to Gallery</h2>
-            <div class="upload-controls">
-                <input type="file" id="imageUploadInput" accept="image/*" hidden>
-                <button id="chooseFileBtn" class="btn-choose"><i class="fas fa-cloud-upload-alt"></i> Choose Photo</button>
-                <span id="fileName">No file chosen</span>
-                <input type="password" id="uploadPassword" placeholder="Enter Password" class="password-input">
-                <button id="addPhotoBtn" class="btn-add" disabled>Add to Grid</button>
-            </div>
-        </section>
-
-        <section class="masonry-grid" id="galleryGrid">
-            </section>
-
-    </main>
-
-    <div id="contextMenu" class="custom-context-menu hidden">
-        <div class="menu-option" id="deleteOption">
-            <i class="fas fa-trash-alt"></i> Delete Photo
-        </div>
     </div>
-    <script src="js/gallery.js"></script>
+</header>
+
+<!-- ================= GALLERY ================= -->
+<main class="gallery-container">
+
+    <!-- Images will be injected here using JS -->
+<div id="galleryContainer"></div>        <!-- JS loads images from /photos folder -->
+    </section>
+
+</main>
+
+<!-- ================= SCRIPT ================= -->
+<script src="js/gallery.js"></script>
+
 </body>
 </html>
