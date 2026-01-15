@@ -70,6 +70,29 @@ button { padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; 
 }
 
 /* Responsive */
-@media (max-width: 1200px) { .masonry-grid { column-count: 4; } }
-@media (max-width: 900px) { .masonry-grid { column-count: 3; } }
-@media (max-width: 600px) { .masonry-grid { column-count: 2; } }
+/* Desktop */
+.masonry-grid {
+    column-count: 4;
+    column-gap: 25px;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+}

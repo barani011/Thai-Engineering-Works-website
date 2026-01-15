@@ -197,3 +197,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".number");
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const suffix = counter.getAttribute("data-suffix") || "";
+        let current = 0;
+
+        const increment = Math.ceil(target / 100); // speed control
+
+        const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+                counter.textContent = target + suffix;
+            } else {
+                counter.textContent = current + suffix;
+                requestAnimationFrame(updateCounter);
+            }
+        };
+
+        updateCounter();
+    });
+});

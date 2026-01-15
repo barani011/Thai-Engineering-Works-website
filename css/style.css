@@ -297,6 +297,21 @@ img {
     line-height: 1.4;
 }
 
+.card {
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-media img {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -581,7 +596,7 @@ img {
     font-weight: 700;
     color: #f7f4f4;
     margin-bottom: 10px;
-    margin-top: -20px;
+    margin-top: -80px;
 }
 
 /* Overall Rating Styling */
@@ -886,7 +901,7 @@ textarea {
 }
 
 .about-section {
-    background-image: linear-gradient(to bottom, #F17900, #C57729);
+    background-image: linear-gradient(to bottom, #F17900, #915418);
     padding: 20px 80px;
     color: white;
     display: flex;
@@ -988,7 +1003,7 @@ textarea {
 }
 
 .star {
-    color: white;
+    color: rgb(245, 229, 5);
     font-size: 1.8rem;
 }
 
