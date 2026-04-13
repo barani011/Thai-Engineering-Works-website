@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thai Engineering Works</title>
+  <title>Contact Us - Thai Engineering Works</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +22,13 @@
 <body>
   <header class="site-header">
     <div class="container header-bar" style="overflow: visible !important;">
-      <a class="logo" href="#home">
+      <a class="logo" href="index.html">
         <img src="assets/logo-86bbf0.png" alt="Thai Engineering Works logo">
-      </a><br>
-      <nav class="nav" id="nav"><br>
+      </a>
+      <nav class="nav" id="nav">
         <a href="index.html">Home</a>
-        <a href="About.html" >About</a>
-        <a href="#contact">Contact</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
         <a href="Gallery.html">Gallery</a>
       </nav>
       <div class="header-actions">
@@ -39,7 +39,8 @@
       </div>
     </div>
   </header>
-  <div class="container" id="contact">
+  <!-- Contact Form and Map Section -->
+  <div class="container contact-wrapper" id="contact">
         <div class="contact-card">
             <h2>CONTACT US</h2>
             
@@ -87,6 +88,7 @@
         </div>
     </div>
 
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-info"><br>
@@ -97,10 +99,10 @@
       </div>
       <div class="footer-nav"><br>
         <h3>Pages</h3>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About us</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Gallery.html">Gallery</a>
       </div>
       <div class="footer-follow"><br>
         <h3>Follow Us</h3>
@@ -118,6 +120,30 @@
       <p>© 2025 THAI ENGINEERING WORKS. All rights reserved.</p>
     </div>
   </footer>
-</body>
-</html>
+
+  <script src="js/main.js"></script>
+
+  <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const btn = document.querySelector('.submit-btn');
+            const originalText = btn.innerText;
+            btn.innerText = 'SENDING...';
+
+            const serviceID = 'service_4rulsod';
+            const templateID = 'template_calw3qf';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.innerText = 'SENT!';
+                    alert('Message Sent Successfully!');
+                    btn.innerText = originalText;
+                    document.getElementById('contact-form').reset();
+                }, (err) => {
+                    btn.innerText = originalText;
+                    alert('Failed to send message. Error: ' + JSON.stringify(err));
+                });
+        });
+    </script>
 
