@@ -102,6 +102,8 @@ img {
   margin-top: 5px;
   padding: 0.25rem 0;
   transition: color 0.2s ease;
+  color: black;
+  margin-right: 20px;
 }
 
 .nav a:hover,
@@ -221,7 +223,7 @@ img {
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .product-card {
@@ -231,20 +233,22 @@ img {
   overflow: hidden;
   display: grid;
   grid-template-rows: auto 1fr;
+  margin-top: 20px;
 }
 
 .product-card .product-image img {
-  width: 100%;
-  height: auto;
-  min-height: 250px;
+  width: 400px;
+  height: 50px;
+  min-height: 180px;
   object-fit: cover;
 }
 
 .product-body {
-  padding: 1.25rem 1.5rem 1.5rem;
+  padding: 1rem 1.25rem 1.25rem;
 }
 
 .product-body h3 {
+  color: #000;
   margin: 0 0 0.5rem;
   font-size: 1.35rem;
   font-family: 'Asap', sans-serif;
@@ -464,6 +468,7 @@ img {
 
 .highlight {
     color: #d9822b;
+    margin-left: -100px;
 }
 
 .description {
@@ -479,9 +484,22 @@ img {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    margin-top: 0;
 }
 
-.image-content img {
+.image-content2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin-top: 0;
+}
+.image-content img, .image-content2 img {
     width: 100%;
     max-width: 500px;
     margin-right: 0;
@@ -529,8 +547,18 @@ img {
         max-width: 100%;
     }
     
-    .image-content img {
+    .image-content,
+    .image-content2 {
+        width: 100%;
+        margin-top: 0 !important;
+        max-height: 300px;
+    }
+    
+    .image-content img,
+    .image-content2 img {
         margin-right: 0;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -639,7 +667,7 @@ img {
 
 .rating-text {
     font-size: 1.2rem;
-    color: #333;
+    color: #f7f1f1;
 }
 
 /* Grid Layout */
@@ -1309,10 +1337,15 @@ textarea {
   }
 
   /* CARDS */
+  .container:has(> .card) {
+    gap: 20px;
+  }
+
   .container .card {
-    width: calc(50% - 15px);
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
     margin-bottom: 15px;
-    height: 100px;
+    height: 110px;
   }
 
   /* PRODUCTS GRID */

@@ -93,6 +93,11 @@ button { padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; 
 /* Mobile */
 @media (max-width: 600px) {
     .masonry-grid {
-        column-count: 1;
+        column-count: 3;
+        column-gap: 10px;
+    }
+    
+    .gallery-item {
+        margin-bottom: 10px;
     }
 }

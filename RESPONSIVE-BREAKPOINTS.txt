@@ -1,0 +1,383 @@
+/* ===================================
+   RESPONSIVE BREAKPOINTS REFERENCE
+   Thai Engineering Website
+   =================================== */
+
+/*
+  BREAKPOINT OVERVIEW
+  
+  Desktop:        1200px and above
+  Laptop:         1024px - 1199px
+  Tablet:         768px - 1023px
+  Mobile Lg:      600px - 767px
+  Mobile Sm:      380px - 599px
+  Mobile XS:      Below 380px
+*/
+
+/*
+  COMPONENT BEHAVIOR BY BREAKPOINT
+*/
+
+/* ================================================================
+   HEADER / NAVIGATION
+   ================================================================ */
+  
+  1200px+:
+    - Navigation fully visible horizontally
+    - 4-5 nav items + Call button visible
+    - No hamburger menu
+    - Optimal header height: 60-70px
+
+  900px - 1199px:
+    - Navigation may wrap or compress
+    - Call button still visible
+    - No hamburger menu yet
+    
+  600px - 899px:
+    - Hamburger menu ACTIVE
+    - Navigation hidden by default
+    - Click hamburger to reveal dropdown
+    - Call button compressed or hidden
+    - Header height: 56-60px
+
+  Below 600px:
+    - Full hamburger menu
+    - Minimal header elements
+    - Stacked nav items
+    - Header height: 50-56px
+
+/* ================================================================
+   MAIN SLIDER / PRODUCT SHOWCASE
+   ================================================================ */
+  
+  1200px+:
+    - Text on left, Image on right
+    - Side-by-side layout
+    - Padding: 10% left/right
+    - Gap: 5% between elements
+
+  900px - 1199px:
+    - Text on left, Image on right
+    - Slightly reduced gap
+    - Padding: 5% left/right
+
+  600px - 899px:
+    - Image on top, Text below
+    - Column reversed (image first)
+    - Full width with padding
+    - Center aligned text
+
+  Below 600px:
+    - Single column, full width
+    - Minimal padding
+    - Stacked elements
+    - All text centered
+
+/* ================================================================
+   GALLERY / MASONRY GRID
+   ================================================================ */
+  
+  1200px+:
+    - 4 columns desktop
+    - 20-25px gap
+
+  1024px - 1199px:
+    - 3 columns
+    - 20px gap
+
+  768px - 1023px:
+    - 2 columns
+    - 15px gap
+
+  600px - 767px:
+    - 2 columns
+    - 12px gap
+
+  Below 600px:
+    - 1 column (full width)
+    - 10px gap
+
+/* ================================================================
+   FORMS / INPUT FIELDS
+   ================================================================ */
+  
+  1200px+:
+    - 2-column fields where applicable
+    - Input height: 44px minimum
+    - Padding: 12-15px
+
+  600px - 1199px:
+    - 1-2 column based on context
+    - Input height: 44px minimum
+
+  Below 600px:
+    - Full-width single column
+    - Input height: 44px minimum
+    - Input font: 16px (prevents zoom)
+    - Padding: 12px
+    - Touch-optimized spacing
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+  
+  1200px+:
+    - 3 columns (Contact | Pages | Follow)
+    - 1.5rem gap
+    - Full width navigation
+
+  768px - 1199px:
+    - 2 columns if space allows
+    - Responsive layout
+
+  Below 768px:
+    - 1 column
+    - Center aligned
+    - Social icons centered
+    - Stacked sections
+    - 1.5rem gap between sections
+
+/* ================================================================
+   VIDEO GALLERY
+   ================================================================ */
+  
+  1200px+:
+    - 2 columns large videos
+    - 3 columns small videos
+
+  900px - 1199px:
+    - 1-2 columns based on context
+
+  Below 900px:
+    - All single column
+    - Full width videos
+    - 16:9 aspect ratio maintained
+
+/* ================================================================
+   CONTACT FORM & MAP
+   ================================================================ */
+  
+  900px+:
+    - Side-by-side (Form left, Map right)
+    - 40px gap
+    - Form: ~50% width
+    - Map: ~40% width
+
+  768px - 899px:
+    - Can be side-by-side if space
+    - Flexible layout
+
+  Below 768px:
+    - Stacked vertically
+    - Form full width
+    - Map full width
+    - 20px gap
+    - Form on top
+    - Map below
+
+/* ================================================================
+   ABOUT SECTION
+   ================================================================ */
+  
+  900px+:
+    - Content container side-by-side
+    - Image left, Text right
+    - 60px gap
+    - Full justified text
+
+  600px - 899px:
+    - Start stacking
+    - Reduced gap
+
+  Below 600px:
+    - Image on top, full width
+    - Text below, full width
+    - No justified text (looks bad on mobile)
+    - 30px gap
+    - Remove decorative frame
+
+/* ================================================================
+   CARD LAYOUTS
+   ================================================================ */
+  
+  1200px+:
+    - Variable columns (auto-fit, minmax)
+    - 3-4 items per row
+
+  768px - 1199px:
+    - 2 items per row
+
+  Below 768px:
+    - 1-2 items per row (50% width each)
+
+  Below 380px:
+    - 50% width (2 per row, smaller)
+    - Or 100% width (single column)
+
+/* ================================================================
+   TYPOGRAPHY SCALING
+   ================================================================ */
+  
+  Use clamp() for fluid typography:
+  
+  Heading 1:  clamp(1.5rem, 5vw, 3rem)
+  Heading 2:  clamp(1.3rem, 4vw, 2.2rem)
+  Heading 3:  clamp(1.1rem, 3vw, 1.8rem)
+  Body:       clamp(0.95rem, 2vw, 1.1rem)
+  Small:      clamp(0.8rem, 1.5vw, 0.95rem)
+
+  Min = Mobile minimum
+  vw = Scales with viewport
+  Max = Desktop maximum
+
+/* ================================================================
+   TOUCH TARGET SIZES (Accessibility)
+   ================================================================ */
+  
+  Requirement: Minimum 44×44 pixels (WCAG 2.5)
+  
+  Buttons:
+    - min-height: 44px
+    - min-width: 44px
+    - padding: adjusted for size
+    
+  Links:
+    - min-height: 44px
+    - min-width: 44px
+    - padding-top/bottom minimum
+    
+  Form Inputs:
+    - min-height: 44px
+    - padding: 12-15px
+    
+  Social Icons:
+    - width: 40-44px
+    - height: 40-44px
+    - min-height: 44px
+    - min-width: 44px
+
+/* ================================================================
+   SPACING PATTERNS
+   ================================================================ */
+  
+  Mobile (< 768px):
+    - Container padding: 15-20px
+    - Element gap: 15-20px
+    - Section padding: 20-30px
+    
+  Tablet (768px - 1199px):
+    - Container padding: 20-30px
+    - Element gap: 20-30px
+    - Section padding: 30-40px
+    
+  Desktop (1200px+):
+    - Container padding: 2-4rem
+    - Element gap: 30-40px
+    - Section padding: 40-80px
+
+/* ================================================================
+   IMAGE RESPONSIVENESS
+   ================================================================ */
+  
+  Use:
+    - max-width: 100%
+    - height: auto
+    - object-fit: contain / cover as needed
+    
+  Picture element for art direction:
+    <picture>
+      <source media="(min-width: 900px)" srcset="desktop.jpg">
+      <source media="(max-width: 899px)" srcset="mobile.jpg">
+      <img src="fallback.jpg" alt="description">
+    </picture>
+
+/* ================================================================
+   TESTING CHECKLIST
+   ================================================================ */
+  
+  ✓ Desktop (1920px, 1440px, 1024px)
+  ✓ Tablet (768px, 1024px)
+  ✓ Mobile (375px, 414px, 480px)
+  ✓ Small Mobile (320px, 360px)
+  ✓ Landscape orientation
+  ✓ Touch interactions work
+  ✓ Keyboard navigation works
+  ✓ Forms are accessible
+  ✓ No horizontal scrolling on mobile
+  ✓ Text is readable
+  ✓ Images load properly
+  ✓ Navigation is accessible
+  ✓ Touch targets are 44×44px+
+  ✓ Performance is good (<3s load)
+
+/* ================================================================
+   COMMON ISSUES & FIXES
+   ================================================================ */
+  
+  Issue: Horizontal scrolling on mobile
+  Fix: Check container width, use max-width: 100%, avoid fixed widths
+  
+  Issue: Text too small to read
+  Fix: Use clamp() for responsive sizing, min 16px on mobile
+  
+  Issue: Buttons hard to tap
+  Fix: Ensure min-height/width of 44px
+  
+  Issue: Form fields don't look good
+  Fix: Stack vertically on mobile, set font-size to 16px
+  
+  Issue: Images stretched/distorted
+  Fix: Use object-fit: contain/cover, maintain aspect ratio
+  
+  Issue: Navigation hidden/unusable
+  Fix: Ensure hamburger menu works, test on real devices
+
+/* ================================================================
+   USEFUL MEDIA QUERY PATTERNS
+   ================================================================ */
+  
+  /* Mobile first */
+  .element { ... }
+  @media (min-width: 600px) { ... }
+  @media (min-width: 900px) { ... }
+  
+  /* Desktop first */
+  @media (max-width: 1200px) { ... }
+  @media (max-width: 900px) { ... }
+  @media (max-width: 600px) { ... }
+  
+  /* Specific ranges */
+  @media (min-width: 768px) and (max-width: 1023px) { ... }
+  
+  /* Orientation specific */
+  @media (orientation: landscape) { ... }
+  @media (orientation: portrait) { ... }
+  
+  /* Device type */
+  @media (hover: hover) { ... } /* Desktop - has hover */
+  @media (hover: none) { ... }  /* Mobile - no hover */
+
+/* ================================================================
+   USEFUL TOOLS & RESOURCES
+   ================================================================ */
+  
+  Browser DevTools:
+  - F12 in Chrome/Firefox
+  - Toggle device toolbar (Ctrl+Shift+M)
+  - Test different screen sizes
+  
+  Online Tools:
+  - Google Mobile Friendly Test
+  - BrowserStack (real device testing)
+  - WAVE (accessibility)
+  - Lighthouse (performance)
+  
+  References:
+  - MDN Web Docs
+  - CSS-Tricks
+  - Google Developers
+  - WCAG 2.1 Guidelines
+
+---
+Last Updated: April 2026
+Thailand Engineering Website Responsive Design Reference
